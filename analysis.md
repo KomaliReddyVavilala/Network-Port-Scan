@@ -8,6 +8,13 @@ Tools : Nmap 7.92 , Wireshark 3.6.2
 ''bash/powershell
 
 nmap -sS -T4 -A -v -p- 192.168.1.7 -oN scan_results.txt
+Where -> -sS is TCP SYN Scan which sends SYN Packets to check port status without completing TCP handshake Process.
+-> -T4 is Timing Template which scan faster and avoid IDS triggers
+-> -A is Aggressive Mode which enables the OS detection (-O) , version detection (-sV), Script Scanning (-sC)
+-> -v is verbose which shows the real-time scan progress and additional details
+-> -p- is scan all ports it will scan (1-65535) without this Nmap scans only 1000 common ports
+-> 192.168.1.7 is the target IP address
+-> -oN scan_results.txt is output which saves the results in text format to scan_results.txt
 
 The Scan Results Summary 
 
